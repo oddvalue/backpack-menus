@@ -1,0 +1,59 @@
+{
+    "name": "oddvalue/backpack-menus",
+    "type": "library",
+    "description": "Simple menu CRUD for Backpack for Laravel 4.1+",
+    "keywords": [
+        "oddvalue",
+        "link-builder"
+    ],
+    "homepage": "https://github.com/oddvalue/backpack-menus",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jim Hollington",
+            "email": "jim@oddvalue.co.uk",
+            "homepage": "https://github.com/oddvalue",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.3",
+        "illuminate/contracts": ">=6.0"
+    },
+    "require-dev": {
+        "codedungeon/phpunit-result-printer": "^0.27.0",
+        "phpunit/phpunit": ">=7.0",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Oddvalue\\BackpackMenus\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Oddvalue\\BackpackMenus\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs src tests",
+        "fix-style": "phpcbf src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Oddvalue\\BackpackMenus\\BackpackMenuServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
