@@ -4,7 +4,7 @@
     "description": "Simple menu CRUD for Backpack for Laravel 4.1+",
     "keywords": [
         "oddvalue",
-        "link-builder"
+        "backpack-menus"
     ],
     "homepage": "https://github.com/oddvalue/backpack-menus",
     "license": "MIT",
