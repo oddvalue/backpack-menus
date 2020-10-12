@@ -2,3 +2,9 @@
 composer.lock
 /build/
 .phpunit.result.cache
+artisan
+app/
+bootstrap/
+config/
+routes/console.php
+storage/

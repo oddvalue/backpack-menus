@@ -2,6 +2,8 @@
 
 Construct and manage navigation menus in Backpack 4.1+
 
+Add, edit, reorder, nest, rename menu items and link them to a model, external link or custom internal link.
+
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
@@ -21,10 +23,16 @@ Construct and manage navigation menus in Backpack 4.1+
 
 ## <a name='Installation'></a>Installation
 
-Via Composer
+Via Composer:
 
 ``` bash
 $ composer require oddvalue/backpack-menus
+```
+
+[Optional] Add sidebar link in Backpack CMS:
+
+``` bash
+$ php artisan backpack:add-sidebar-content "<li class='nav-item'><a class='nav-link' href='{{ backpack_url('menu') }}'><i class='nav-icon la la-bars'></i> Menus</a></li>"
 ```
 
 ## <a name='Usage'></a>Usage
