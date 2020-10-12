@@ -53,4 +53,3 @@ class BackpackMenuServiceProvider extends ServiceProvider
         $this->loadRoutesFrom($routeFilePathInUse);
     }
 }
-
