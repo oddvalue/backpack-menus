@@ -21,7 +21,7 @@ class BackpackMenuServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->setupRoutes($this->app->router);
     }
 
     /**
@@ -31,7 +31,13 @@ class BackpackMenuServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->setupRoutes($this->app->router);
+        $this->publishes([
+            __DIR__.'/../database/migrations' => database_path('migrations'),
+        ], 'migrations');
+
+        $this->publishes([
+            __DIR__.'/../resources/views/backpack' => resource_path('views/vendor/backpack'),
+        ], 'views');
     }
 
     /**

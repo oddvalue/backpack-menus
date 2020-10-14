@@ -19,6 +19,8 @@ class MenuCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix').'/menu');
         $this->crud->setEntityNameStrings('menu', 'menus');
 
+        $this->crud->addButtonFromView('line', 'menu_items', 'menu_items', 'beginning');
+
         $this->crud->enableReorder('name', 3);
 
         $this->crud->operation('list', function () {
@@ -27,12 +29,8 @@ class MenuCrudController extends CrudController
                 'label' => 'Name',
             ]);
             $this->crud->addColumn([
-                'label' => 'Parent',
-                'type' => 'select',
-                'name' => 'parent_id',
-                'entity' => 'parent',
-                'attribute' => 'name',
-                'model' => Menu::class,
+                'name' => 'slug',
+                'label' => 'Slug',
             ]);
         });
 

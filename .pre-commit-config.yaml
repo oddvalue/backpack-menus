@@ -14,3 +14,4 @@ repos:
     -   id: php-lint-all
     -   id: php-cs
     -   id: php-unit
+    -   id: php-stan

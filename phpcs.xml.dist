@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 <ruleset name="backpack-media-library">
     <description>The coding standard of backpack-media-library package</description>
+
+    <file>src</file>
+    <file>tests</file>
+
+    <exclude-pattern>*\.blade.php$</exclude-pattern>
+
     <arg value="p" />
 
     <config name="ignore_warnings_on_exit" value="1" />
