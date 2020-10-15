@@ -19,7 +19,6 @@ class CreateMenuItemsTable extends Migration
             $table->string('type', 20)->nullable();
             $table->nullableMorphs('menuable');
             $table->boolean('include_children');
-            $table->string('descendant_field')->nullable();
             $table->unsignedInteger('max_depth')->nullable();
             $table->text('label')->nullable();
             $table->text('href')->nullable();

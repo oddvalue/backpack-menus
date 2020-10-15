@@ -41,9 +41,11 @@ class MenuItemCrudController extends CrudController
                 'label' => 'Name',
             ]);
             $this->crud->addField([
-                'name' => 'slug',
-                'label' => 'Slug',
-                'hint' => 'Leave blank to generate from the menu name',
+                'type' => 'menuable_or_link',
+                'name' => 'menuable_or_link',
+                'label' => 'Link',
+                'view_namespace' => 'backpack-menus::fields',
+                'models' => []
             ]);
         });
     }

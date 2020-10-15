@@ -21,7 +21,7 @@ class BackpackMenuServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->setupRoutes($this->app->router);
+        $this->setupRoutes();
     }
 
     /**
@@ -35,6 +35,7 @@ class BackpackMenuServiceProvider extends ServiceProvider
             __DIR__.'/../database/migrations' => database_path('migrations'),
         ], 'migrations');
 
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'backpack-menus');
         $this->publishes([
             __DIR__.'/../resources/views/backpack' => resource_path('views/vendor/backpack'),
         ], 'views');
@@ -43,10 +44,9 @@ class BackpackMenuServiceProvider extends ServiceProvider
     /**
      * Define the routes for the application.
      *
-     * @param  \Illuminate\Routing\Router  $router
      * @return void
      */
-    public function setupRoutes(Router $router)
+    public function setupRoutes()
     {
         // by default, use the routes file provided in vendor
         $routeFilePathInUse = __DIR__.'/..'.$this->routeFilePath;
