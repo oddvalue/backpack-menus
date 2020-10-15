@@ -16,4 +16,5 @@ Route::group([
     'namespace' => 'Oddvalue\BackpackMenus\Http\Controllers\Admin',
 ], function () {
     Route::crud('menu', 'MenuCrudController');
+    Route::crud('menu/{menu_id}/item', 'MenuItemCrudController');
 });
