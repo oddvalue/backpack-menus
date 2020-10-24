@@ -1,4 +1,6 @@
-# Backpack for Laravel Menu CRUD
+# WIP: Backpack for Laravel Menu CRUD
+
+THIS PACKAGE IS A WORK IN PROGRESS AND NOT PRODUCTION READY
 
 Construct and manage navigation menus in Backpack 4.1+
 
